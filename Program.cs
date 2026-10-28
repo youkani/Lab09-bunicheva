@@ -106,57 +106,57 @@
 //     Console.WriteLine("Слово не является палиндромом");
 // }
 
-// //Итоговая задача. «Проверка email»
-// Console.Write("Введите адрес электронной почты: ");
-// string email = Console.ReadLine();
+//Итоговая задача. «Проверка email»
+Console.Write("Введите адрес электронной почты: ");
+string email = Console.ReadLine();
 
-// int dog = 0;
-// string low = email.ToLower();
+int dog = 0;
+string low = email.ToLower();
 
-// if (email.Length < 5)
-// {
-//     Console.WriteLine("Адрес некорректен. Длина меньше 5 символов");
-//     return;
-// }
+if (email.Length < 5)
+{
+    Console.WriteLine("Адрес некорректен. Длина меньше 5 символов");
+    return;
+}
 
-// for (int i = 0; i < email.Length; i++) {
-//     if (email[i] == '@') {
-//         dog++;
-//     }
-// }
-
-// if (dog != 1) {
-//     Console.WriteLine("Адрес некорректен. В нём должен быть один символ @");
-//     return;
-// }
-// if (email[0] == '@' || email[email.Length - 1] == '@') {
-//     Console.WriteLine("Адрес некорректен. Он не должен начинаться или заканчиваться на @");
-//     return;
-// }
-// if (email.Contains(" ")) {
-//     Console.WriteLine("Адрес некорректен. В нём не должно быть пробелов");
-//     return;
-// }
-// if (!low.EndsWith(".ru") && !low.EndsWith(".com")) {
-//     Console.WriteLine("Адрес некорректен. Он должен заканчиваться на .ru или .com");
-//     return;
-// }
-// Console.WriteLine("Адрес корректен");
-// Console.WriteLine(low);
-
-//Дополнительное задание ★★★
-using System.Text;
-
-Console.Write("Введите строку: ");
-string str = Console.ReadLine();
-
-var sb = new StringBuilder();
-string glasn = "аеёиоуыэюя";
-
-for (int i=0; i<str.Length; i++) {
-    char letter = str[i];
-    if (!glasn.Contains(char.ToLower(letter))) {
-        sb.Append(letter);
+for (int i = 0; i < email.Length; i++) {
+    if (email[i] == '@') {
+        dog++;
     }
 }
-Console.WriteLine(sb.ToString());
+
+if (dog != 1) {
+    Console.WriteLine("Адрес некорректен. В нём должен быть один символ @");
+    return;
+}
+if (email[0] == '@' || email[email.Length - 1] == '@') {
+    Console.WriteLine("Адрес некорректен. Он не должен начинаться или заканчиваться на @");
+    return;
+}
+if (email.Contains(" ")) {
+    Console.WriteLine("Адрес некорректен. В нём не должно быть пробелов");
+    return;
+}
+if (!low.EndsWith(".ru") && !low.EndsWith(".com")) {
+    Console.WriteLine("Адрес некорректен. Он должен заканчиваться на .ru или .com");
+    return;
+}
+Console.WriteLine("Адрес корректен");
+Console.WriteLine(low);
+
+// //Дополнительное задание ★★★
+// using System.Text;
+
+// Console.Write("Введите строку: ");
+// string str = Console.ReadLine();
+
+// var sb = new StringBuilder();
+// string glasn = "аеёиоуыэюя";
+
+// for (int i=0; i<str.Length; i++) {
+//     char letter = str[i];
+//     if (!glasn.Contains(char.ToLower(letter))) {
+//         sb.Append(letter);
+//     }
+// }
+// Console.WriteLine(sb.ToString());
